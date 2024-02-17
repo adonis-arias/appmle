@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Hacer disponible el puerto 8000 al mundo exterior a este contenedor
 # Esto no publica el puerto, solo indica que el puerto está destinado a ser publicado
-EXPOSE 8081
+EXPOSE 8000
 
 # Ejecutar app.py cuando se inicie el contenedor
 # uvicorn se usa como servidor ASGI para ejecutar la aplicación FastAPI
-CMD ["streamlit", "run", "app.py", "--server.port", "8081", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app.py", "--server.port", "8000", "--server.address=0.0.0.0"]
