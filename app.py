@@ -43,5 +43,5 @@ with st.container():
                 st.success(f"Classification predict: {classification}")
 
 # Footer
-st.markdown("-"*11)
+st.markdown("-"*12)
 st.text("Streamlit App for Image Generation and Classification")
