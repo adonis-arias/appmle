@@ -34,7 +34,7 @@ with st.container():
             if st.button("Classificar Imagen Generada"):
                 st.image(st.session_state['generated_image'], caption='Imagen para Clasificar')
                 classification = classification_image(st.session_state['generated_image'])
-                st.success(f"Classification: {classification}")
+                st.success(f"Classification predict: {classification}")
         if uploaded_file is not None:
             image = Image.open(uploaded_file)
             st.image(image, caption='Uploaded Image')
