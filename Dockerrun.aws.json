@@ -1,0 +1,12 @@
+{
+	  "AWSEBDockerrunVersion": "1",
+	  "Image":{
+	  	"Name":"533267035704.dkr.ecr.us-east-1.amazonaws.com/container-mle"
+	  },
+	  "Ports":[
+	  {
+		"ContainerPort":8501
+	  }
+	  ]
+}
+
