@@ -1,5 +1,8 @@
 version: 0.2
 phases:
+  install:
+    commands:
+      - echo Installing something
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -7,7 +10,7 @@ phases:
       - echo "Retrieving ECR login password"
       - PASSWORD=$(aws ecr get-login-password --region $AWS_DEFAULT_REGION)
       - echo "Logging into Docker with ECR credentials"
-      - REPOSITORY_URI=533267339745.dkr.ecr.us-east-1.amazonaws.com/my-predict-api
+      - REPOSITORY_URI=533267035704.dkr.ecr.us-east-1.amazonaws.com/app-mle
       - docker login --username AWS --password $PASSWORD $REPOSITORY_URI:latest
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
