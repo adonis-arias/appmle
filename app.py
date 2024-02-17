@@ -40,7 +40,7 @@ with st.container():
             st.image(image, caption='Uploaded Image')
             if st.button("Classify"):
                 classification = classification_image(image)
-                st.success(f"Classification: {classification}")
+                st.success(f"Classification predict: {classification}")
 
 # Footer
 st.markdown("---")
