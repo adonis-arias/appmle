@@ -25,7 +25,7 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '{"AWSEBDockerrunVersion":"1","Image":{"Name":"533267035704.dkr.ecr.us-east-1.amazonaws.com/container-mle:latest","Update":"true"},"Ports":[{"ContainerPort":8000}]}' > Dockerrun.aws.json
+      - printf '{"AWSEBDockerrunVersion":"1","Image":{"Name":"533267035704.dkr.ecr.us-east-1.amazonaws.com/container-mle:container-mle","Update":"true"},"Ports":[{"ContainerPort":8000}]}' > Dockerrun.aws.json
       - cat Dockerrun.aws.json
 artifacts:
   files: Dockerrun.aws.json
