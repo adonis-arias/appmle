@@ -34,11 +34,11 @@ steps:
         curl "https://$_CLOUD_RUN_SERVICE-6ks3mtyyxq-uc.a.run.app/$_PIPELINE_TYPE"
 
 substitutions:
-  _PROJECT_ID: 'astral-reef-391421'
+  _PROJECT_ID: 'atomic-airship-412900'
   _REGION: 'us-central1'
-  _REPOSITORY_NAME: 'mle-template'
-  _IMAGE_NAME: 'mle-template'
-  _CLOUD_RUN_SERVICE: 'mle-template-service'
+  _REPOSITORY_NAME: 'container-mle'
+  _IMAGE_NAME: 'container_mle'
+  _CLOUD_RUN_SERVICE: 'cloudrun-app-mle'
   _PIPELINE_TYPE: 'train_pipeline'
 
 images:
